@@ -1,0 +1,24 @@
+<svg:g>
+  <g
+    [attr.transform]="
+      'translate(' +
+      model.transform.translate.x +
+      ' ' +
+      model.transform.translate.y +
+      ') ' +
+      'scale(' +
+      model.transform.scale.x +
+      ' ' +
+      model.transform.scale.y +
+      ')' +
+      'rotate(' +
+      model.transform.rotate +
+      ')'
+    "
+  >
+    <g *ngFor="let pass of model.passes" [ngClass]="pass.renderDefinition">
+      <path *ngFor="let path of pass.pathDefinitions" [attr.d]="path" />
+    </g>
+  </g>
+  <circle r="5" fill="yellow" />
+</svg:g>

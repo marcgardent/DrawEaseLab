@@ -1,0 +1,61 @@
+<div class="fullscreen">
+  <div class="container vertical expand">
+    <div class="toolbox horizontal">
+      <div class="tool"></div>
+      <button class="tool" (click)="toggleFullscreen()">↕️ Fullscreen</button>
+    </div>
+    <div class="content">
+      <div class="container horizontal expand">
+        <div class="toolbox vertical">
+          <button class="tool">Obj</button>
+          <div class="separator"></div>
+          <button class="tool">Clip</button>
+          <div class="separator"></div>
+          <button class="tool pen" (click)="selectPass(3)">Ink</button>
+          <button class="tool pen" (click)="selectPass(2)">Val</button>
+          <button class="tool pen" (click)="selectPass(1)">Col</button>
+          <button class="tool pen" (click)="selectPass(0)">Drft</button>
+          <div class="separator"></div>
+          <button class="tool">Bg</button>
+        </div>
+
+        <div class="content">
+          <blueprint [model]="model"></blueprint>
+        </div>
+
+        <div class="toolbox vertical">
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#000000" />
+            <div class="label">Ink</div>
+          </div>
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#00ff00" />
+            <div class="label">pulA</div>
+          </div>
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#0000FF" />
+            <div class="label">pulB</div>
+          </div>
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#0000FF" />
+            <div class="label">sky1</div>
+          </div>
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#0000FF" />
+            <div class="label">Sky2</div>
+          </div>
+          <div class="bucket vertical">
+            <input type="radio" name="Color" />
+            <input class="tool" type="color" value="#0000FF" />
+            <div class="label">Test</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

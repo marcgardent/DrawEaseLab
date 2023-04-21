@@ -1,0 +1,99 @@
+<svg #AreaId width="100%" height="100%" style="background: #666">
+  <style>
+    /* Dynamic Palette */
+
+    :root {
+      --ink-color: black;
+      --draft-color: blue;
+    }
+
+    .ink-pass {
+      fill: transparent;
+      stroke: var(--ink-color);
+      stroke-width: 4;
+      stroke-linecap:round;
+    }
+
+    .draft-pass {
+      fill: transparent;
+      stroke: var(--draft-color);
+      stroke-width: 2;
+      stroke-linecap:round;
+    }
+
+    .color-pass {
+      fill: red;
+      stroke: transparent;
+    }
+
+    .value-pass {
+      fill: gray;
+      stroke: transparent;
+      mix-blend-mode : luminosity;
+      opacity : 1;
+    }
+  </style>
+
+  <defs>
+    <pattern
+      id="smallGrid"
+      width="20"
+      height="20"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M 20 0 L 0 0 0 20"
+        fill="none"
+        stroke="#000"
+        stroke-width="0.5"
+      />
+    </pattern>
+
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)" />
+      <path
+        d="M 100 0 L 0 0 0 100"
+        fill="none"
+        stroke="black"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <pattern
+      id="largeGrid"
+      width="500"
+      height="500"
+      patternUnits="userSpaceOnUse"
+    >
+      <rect width="500" height="500" fill="url(#grid)" />
+      <path
+        d="M 500 0 L 0 0 0 500"
+        fill="none"
+        stroke="black"
+        stroke-width="2"
+      />
+    </pattern>
+  </defs>
+
+  <text x="10" y="10" font-family="Verdana" font-size="10" fill="#FFF">
+    Blueprint Experience, "2D CAD Ergonomic Showroom" pad=({{ paddingx }},px={{
+      paddingy
+    }}) scale={{ scale }}
+  </text>
+  <g
+    [attr.transform]="
+      'translate(' + paddingx + ' ' + paddingy + ') ' + 'scale(' + scale + ')'
+    "
+  >
+    <rect
+      x="-5000"
+      y="-5000"
+      width="10001"
+      height="10001"
+      fill="url(#largeGrid)"
+    />
+    <g>
+      <g blueprint-object [model]="model.activeObject" />
+    </g>
+  </g>
+</svg>

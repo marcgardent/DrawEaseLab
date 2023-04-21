@@ -1,0 +1,87 @@
+//<div class="container horizontal">
+//<div class="banner vertical">x</div>
+//<div class="content">
+
+.expand {
+  height: 100%;
+  width: 100%;
+}
+
+.vertical {
+  flex-direction: column;
+  > .tool {
+    width: 100%;
+    min-height: 40px;
+  }
+
+  > .separator {
+    width: 100%;
+    min-height: 5px;
+    border: solid #666;
+    border-width: 2px 0 2px 0;
+  }
+}
+
+.horizontal {
+  flex-direction: row;
+  > .tool {
+    height: 100%;
+    min-width: 40px;
+  }
+}
+
+.fullscreen {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  .container {
+    display: flex;
+    .content {
+      flex: 1 0 auto;
+    }
+
+    .toolbox {
+      padding: 5px;
+      flex: 0 0 50px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      button.tool {
+        background: white;
+        border: 0px;
+        border-radius: 2px;
+        box-shadow: 1px 1px 5px black;
+        &:active {
+          background: #222;
+          color: white;
+          box-shadow: -1px -1px 5px white;
+        }
+      }
+
+      .bucket {
+        display: flex;
+        flex-direction: column;
+        background: black;
+        gap: 10px;
+        padding: 5px;
+        border-radius: 10px;
+        input[type='radio'] {
+          filter: grayscale(1);
+          transform: scale(1.5);
+        }
+
+        input[type='color'] {
+          border: 0;
+          height: 10px;
+        }
+
+        .label {
+          font-size: 10px;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
