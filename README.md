@@ -5,6 +5,7 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 ## Features
 
 - RayCast-Filler : fill areas without going over ink lines.
+- Use Standard Rendering Engine : SVG/CSS Rendering Engine.
 
 ## Target Devices
 
@@ -55,4 +56,6 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 
 ## Contributors
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-webcontainer-template-mklfvs)
+> This is an Angular web app based on SVG elements.
+
+[Fork and Edit on StackBlitz ⚡️](https://stackblitz.com/edit/draw-ease-lab)
