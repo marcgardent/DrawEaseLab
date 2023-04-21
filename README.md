@@ -4,8 +4,15 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 
 ## Features
 
-- RayCast-Filler : fill areas without going over ink lines.
-- Use Standard Rendering Engine : SVG/CSS Rendering Engine.
+### RayCast Fill Tool
+
+> fill areas without going over ink lines.
+
+![RayCast Fill Tool](./doc/raycast-fill-tool.gif)
+
+### Standard Rendering Engine
+
+The app uses the SVG+CSS engines embedded in web browsers. Additionally, it is a powerful and performant 2D engine that also adheres to standards from the W3C.
 
 ## Target Devices
 
