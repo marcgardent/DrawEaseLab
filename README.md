@@ -4,6 +4,8 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 
 [🎨 Try it DrawEase Lab - Online!](https://marcgardent.github.io/DrawEaseLab/)
 
+> Support for mouse, stylus, and touch devices: tested with iPad on Chrome/Safari browsers.
+
 ## Features
 
 ### RayCast Fill Tool
@@ -15,10 +17,6 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 ### Standard Rendering Engine
 
 The app uses the SVG+CSS engines embedded in web browsers. Additionally, it is a powerful and performant 2D engine that also adheres to standards from the W3C.
-
-## Target Devices
-
-- Support for mouse, stylus, and touch devices: tested with iPad on Chrome/Safari browsers.
 
 ## ROADMAP
 
