@@ -1,4 +1,4 @@
-# DrawEaseLab
+# DrawEase Lab
 
 Please note that DrawEaseLab is a prototype or proof-of-concept software that demonstrates new ergonomic design ideas. While we have made every effort to ensure its functionality and reliability, it is still in development and may have bugs or limitations. DrawEaseLab is not intended to be a full-featured or commercial-grade software at this time. It is provided solely for demonstration purposes and to gather feedback from users. We appreciate your understanding and encourage you to provide us with your comments and suggestions to help us improve the software.
 
