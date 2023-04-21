@@ -8,7 +8,7 @@ Please note that DrawEaseLab is a prototype or proof-of-concept software that de
 
 > fill areas without going over ink lines.
 
-<img src="./doc/raycast-fill-tool.gif" alt="RayCast Fill Tool" width="320"/>
+<img src="./charts/raycast-fill-tool.gif" alt="RayCast Fill Tool" width="320"/>
 
 ### Standard Rendering Engine
 
