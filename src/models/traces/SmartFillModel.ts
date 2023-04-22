@@ -2,7 +2,7 @@ import { Edge, EdgeIntersection } from '@models/geometry/Edge';
 import { EdgeCollection } from '@models/geometry/EdgeCollection';
 
 import { Vector } from '@models/geometry/Vector';
-import { TraceModel } from '@models/traces/TraceModel';
+import { RasterImage, TraceModel } from '@models/traces/TraceModel';
 
 export class SmartFillModel implements TraceModel {
   private center: Vector;
@@ -18,6 +18,13 @@ export class SmartFillModel implements TraceModel {
     return this.inner.raw;
   }
 
+  get rasterImage(): RasterImage {
+    return this.inner.rasterImage;
+  }
+
+  set rasterImage(v: RasterImage) {
+    this.inner.rasterImage = v;
+  }
   constructor(
     private readonly inner: TraceModel,
     private readonly edges: EdgeCollection

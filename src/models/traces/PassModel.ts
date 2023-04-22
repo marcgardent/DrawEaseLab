@@ -1,10 +1,13 @@
 import { Vector } from '@models/geometry/Vector';
-import { TraceModel } from '@models/traces/TraceModel';
+import { RasterImage, TraceModel } from '@models/traces/TraceModel';
 
 export class PassModel implements TraceModel {
   public readonly renderDefinition: string;
   public readonly pathDefinitions: Array<string> = new Array();
   public readonly raw: Array<Array<Vector>> = new Array();
+  private rasterData: string = '';
+
+  public rasterImage: RasterImage;
 
   constructor(renderDefinition: string) {
     this.renderDefinition = renderDefinition;

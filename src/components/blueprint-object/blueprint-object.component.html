@@ -17,7 +17,17 @@
     "
   >
     <g *ngFor="let pass of model.passes" [ngClass]="pass.renderDefinition">
-      <path *ngFor="let path of pass.pathDefinitions" [attr.d]="path" />
+      <image
+        *ngIf="pass.rasterImage"
+        [attr.xlink:href]="pass.rasterImage.stringUrl"
+        [attr.width]="pass.rasterImage.width"
+        [attr.height]="pass.rasterImage.height"
+        x="0"
+        y="0"
+      />
+      <g>
+        <path *ngFor="let path of pass.pathDefinitions" [attr.d]="path" />
+      </g>
     </g>
   </g>
   <circle r="5" fill="yellow" />

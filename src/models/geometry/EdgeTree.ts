@@ -18,6 +18,12 @@ export class EdgeTree implements EdgeCollection {
     }
   }
 
+  addPixel(box: Vector) {
+    this.system.createBox(box, 1, 1, {
+      isStatic: true,
+    });
+  }
+
   remove(...edges: Edge[]): void {
     // todo implement index
   }

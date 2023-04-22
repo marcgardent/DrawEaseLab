@@ -1,7 +1,15 @@
 <div class="fullscreen">
   <div class="container vertical expand">
     <div class="toolbox horizontal">
-      <div class="tool"></div>
+      <div class="tool">
+        <label for="ink-image">Upload Raster Image as Ink</label>
+        <input
+          type="file"
+          name="ink-image"
+          id="ink-image"
+          (change)="fileChanged($event)"
+        />
+      </div>
       <button class="tool" (click)="toggleFullscreen()">↕️ Fullscreen</button>
     </div>
     <div class="content">

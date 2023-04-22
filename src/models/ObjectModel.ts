@@ -53,4 +53,8 @@ export class ObjectModel {
   public startTrace(pos: Vector): void {
     this.activePass.startTrace(pos);
   }
+
+  public addPixelAsInk(pos: Vector): void {
+    this.edges.addPixel(pos);
+  }
 }

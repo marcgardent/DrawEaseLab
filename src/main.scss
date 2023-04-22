@@ -59,6 +59,28 @@
         }
       }
 
+      div.tool {
+        display: flex;
+        label {
+          padding: 10px;
+          background: white;
+          border: 0px;
+          border-radius: 2px;
+          box-shadow: 1px 1px 5px black;
+          &:active {
+            background: #222;
+            color: white;
+            box-shadow: -1px -1px 5px white;
+          }
+        }
+
+        input[type='file'] {
+          opacity: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+
       .bucket {
         display: flex;
         flex-direction: column;

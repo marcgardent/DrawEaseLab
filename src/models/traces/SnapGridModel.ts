@@ -1,5 +1,5 @@
 import { Vector } from '@models/geometry/Vector';
-import { TraceModel } from '@models/traces/TraceModel';
+import { RasterImage, TraceModel } from '@models/traces/TraceModel';
 
 export class SnapGridModel implements TraceModel {
   constructor(private readonly inner: TraceModel) {}
@@ -13,6 +13,14 @@ export class SnapGridModel implements TraceModel {
 
   get raw(): Array<Array<Vector>> {
     return this.inner.raw;
+  }
+
+  get rasterImage(): RasterImage {
+    return this.inner.rasterImage;
+  }
+
+  set rasterImage(v: RasterImage) {
+    this.inner.rasterImage = v;
   }
 
   startTrace(logicPos: Vector): void {

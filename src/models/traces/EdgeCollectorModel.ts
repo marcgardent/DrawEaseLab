@@ -1,7 +1,7 @@
 import { Edge } from '@models/geometry/Edge';
 import { EdgeCollection } from '@models/geometry/EdgeCollection';
 import { Vector } from '@models/geometry/Vector';
-import { TraceModel } from '@models/traces/TraceModel';
+import { RasterImage, TraceModel } from '@models/traces/TraceModel';
 import { Subject } from 'rxjs';
 
 export class EdgeCollectorModel implements TraceModel {
@@ -20,6 +20,14 @@ export class EdgeCollectorModel implements TraceModel {
 
   get raw(): Array<Array<Vector>> {
     return this.inner.raw;
+  }
+
+  get rasterImage(): RasterImage {
+    return this.inner.rasterImage;
+  }
+
+  set rasterImage(v: RasterImage) {
+    this.inner.rasterImage = v;
   }
 
   startTrace(logicPos: Vector): void {
