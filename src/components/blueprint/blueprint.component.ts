@@ -61,7 +61,7 @@ export class BlueprintComponent implements OnInit {
     }
   }
 
-  @HostListener('pointermove', ['$event'])
+  @HostListener('document:pointermove', ['$event'])
   onPointerMove($event: PointerEvent) {
     $event.preventDefault();
     $event.stopPropagation();
@@ -86,7 +86,7 @@ export class BlueprintComponent implements OnInit {
     }
   }
 
-  @HostListener('touchmove', ['$event'])
+  @HostListener('document:touchmove', ['$event'])
   onTouchMove($event: TouchEvent) {
     $event.preventDefault();
     $event.stopPropagation();
@@ -96,7 +96,7 @@ export class BlueprintComponent implements OnInit {
     }
   }
 
-  @HostListener('wheel', ['$event'])
+  @HostListener('document:wheel', ['$event'])
   onScroll($event: WheelEvent) {
     const newscale = this.scale + 0.1 * (-$event.deltaY / 120);
     if (newscale > 0.01) {
@@ -104,7 +104,7 @@ export class BlueprintComponent implements OnInit {
     }
   }
 
-  @HostListener('window:contextmenu', ['$event'])
+  @HostListener('document:window:contextmenu', ['$event'])
   onContextMenu($event: MouseEvent) {
     $event.preventDefault();
     $event.stopPropagation();
